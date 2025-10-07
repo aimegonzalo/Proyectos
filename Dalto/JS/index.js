@@ -13,62 +13,94 @@
 
 // Juan quiere saber si tiene vuelto
 
-let dineroJuan = prompt("cuánto dinero tiene Juan?");
-let dineroPedro = prompt("cuánto dinero tiene Pedro?");
-let dineroLucas = prompt("cuánto dinero tiene Lucas?");
+// let dineroJuan = prompt("cuánto dinero tiene Juan?");
+// let dineroPedro = prompt("cuánto dinero tiene Pedro?");
+// let dineroLucas = prompt("cuánto dinero tiene Lucas?");
 
-dineroJuan = parseInt(dineroJuan);
+// dineroJuan = parseInt(dineroJuan);
 
-if (dineroJuan >= 0.6 && dineroJuan < 1) {
-  alert("Juan puede comprar el helado 1");
-  alert("y le sobra" + (dineroJuan - 0.6));
-} else if (dineroJuan >= 1 && dineroJuan < 1) {
-  alert("Juan puede comprar el helado 2");
-  alert("y le sobra" + (dineroJuan - 1));
-} else if (dineroJuan >= 1.6 && dineroJuan < 1.7) {
-  alert("Juan puede comprar el helado 3");
-  alert("y le sobra" + (dineroJuan - 1.6));
-} else if (dineroJuan >= 1.7 && dineroJuan < 1.8) {
-  alert("Juan puede comprar el helado 4");
-  alert("y le sobra" + (dineroJuan - 1.7));
-} else if (dineroJuan >= 1.8 && dineroJuan < 2.9) {
-  alert("Juan puede comprar el helado 5");
-  alert("y le sobra" + (dineroJuan - 1.8));
-} else if (dineroJuan >= 2.9) {
-  alert("Juan puede comprar el helado 6 o el helado 7");
-  alert("y le sobra" + (dineroJuan - 2.9));
-} else {
-  alert("Juan No tiene suficiente dinero");
+// if (dineroJuan >= 0.6 && dineroJuan < 1) {
+//   alert("Juan puede comprar el helado 1");
+//   alert("y le sobra" + (dineroJuan - 0.6));
+// } else if (dineroJuan >= 1 && dineroJuan < 1) {
+//   alert("Juan puede comprar el helado 2");
+//   alert("y le sobra" + (dineroJuan - 1));
+// } else if (dineroJuan >= 1.6 && dineroJuan < 1.7) {
+//   alert("Juan puede comprar el helado 3");
+//   alert("y le sobra" + (dineroJuan - 1.6));
+// } else if (dineroJuan >= 1.7 && dineroJuan < 1.8) {
+//   alert("Juan puede comprar el helado 4");
+//   alert("y le sobra" + (dineroJuan - 1.7));
+// } else if (dineroJuan >= 1.8 && dineroJuan < 2.9) {
+//   alert("Juan puede comprar el helado 5");
+//   alert("y le sobra" + (dineroJuan - 1.8));
+// } else if (dineroJuan >= 2.9) {
+//   alert("Juan puede comprar el helado 6 o el helado 7");
+//   alert("y le sobra" + (dineroJuan - 2.9));
+// } else {
+//   alert("Juan No tiene suficiente dinero");
+// }
+
+// if (dineroPedro >= 0.6 && dineroPedro < 1) {
+//   alert("Pedro puede comprar el helado 1");
+// } else if (dineroPedro >= 1 && dineroPedro < 1.6) {
+//   alert("Pedro puede comprar el helado 2");
+// } else if (dineroPedro >= 1.6 && dineroPedro < 1.7) {
+//   alert("Pedro puede comprar el helado 3");
+// } else if (dineroPedro >= 1.7 && dineroPedro < 1.8) {
+//   alert("Pedro puede comprar el helado 4");
+// } else if (dineroPedro >= 1.8 && dineroPedro < 2.9) {
+//   alert("Pedro puede comprar el helado 5");
+// } else if (dineroPedro >= 2.9) {
+//   alert("Pedro puede comprar el helado 6 o el helado 7");
+// } else {
+//   alert("Pedro no tiene suficiente dinero");
+// }
+
+// if (dineroLucas >= 0.6 && dineroLucas < 1) {
+//   alert("Lucas puede comprar el helado 1");
+// } else if (dineroLucas >= 1 && dineroLucas < 1.6) {
+//   alert("Lucas puede comprar el helado 2");
+// } else if (dineroLucas >= 1.6 && dineroLucas < 1.7) {
+//   alert("Lucas puede comprar el helado 3");
+// } else if (dineroLucas >= 1.7 && dineroLucas < 1.8) {
+//   alert("Lucas puede comprar el helado 4");
+// } else if (dineroLucas >= 1.8 && dineroLucas < 2.9) {
+//   alert("Lucas puede comprar el helado 5");
+// } else if (dineroLucas >= 2.9) {
+//   alert("Lucas puede comprar el helado 6 o el helado 7");
+// } else {
+//   alert("Lucas no tiene suficiente dinero");
+// }
+
+
+// Segundo ejercicio
+// En una fiesta, los menores de 18 años no pueden entrar
+// despues de las 2 am, la primer persona que entre no pagará entrada
+// la fiesta termina a las 7 am
+//
+//
+
+let free = false
+const validarCliente = (time) =>{
+  let edad = prompt("cuál es tu edad?")
+  if (edad >= 18){
+    if (time >= 2 && time < 7 && free == false){
+      alert(`Podes pasar gratis porque son las ${time} la primer persona después de las 2`)
+      free = true
+    }else {
+      alert("podes pasar pero tenes que pagar la entrada")
+    }
+    }else {
+  alert("menores de edad no pueden pasar")
+  }
 }
 
-if (dineroPedro >= 0.6 && dineroPedro < 1) {
-  alert("Pedro puede comprar el helado 1");
-} else if (dineroPedro >= 1 && dineroPedro < 1.6) {
-  alert("Pedro puede comprar el helado 2");
-} else if (dineroPedro >= 1.6 && dineroPedro < 1.7) {
-  alert("Pedro puede comprar el helado 3");
-} else if (dineroPedro >= 1.7 && dineroPedro < 1.8) {
-  alert("Pedro puede comprar el helado 4");
-} else if (dineroPedro >= 1.8 && dineroPedro < 2.9) {
-  alert("Pedro puede comprar el helado 5");
-} else if (dineroPedro >= 2.9) {
-  alert("Pedro puede comprar el helado 6 o el helado 7");
-} else {
-  alert("Pedro no tiene suficiente dinero");
-}
-
-if (dineroLucas >= 0.6 && dineroLucas < 1) {
-  alert("Lucas puede comprar el helado 1");
-} else if (dineroLucas >= 1 && dineroLucas < 1.6) {
-  alert("Lucas puede comprar el helado 2");
-} else if (dineroLucas >= 1.6 && dineroLucas < 1.7) {
-  alert("Lucas puede comprar el helado 3");
-} else if (dineroLucas >= 1.7 && dineroLucas < 1.8) {
-  alert("Lucas puede comprar el helado 4");
-} else if (dineroLucas >= 1.8 && dineroLucas < 2.9) {
-  alert("Lucas puede comprar el helado 5");
-} else if (dineroLucas >= 2.9) {
-  alert("Lucas puede comprar el helado 6 o el helado 7");
-} else {
-  alert("Lucas no tiene suficiente dinero");
-}
+validarCliente(23)
+validarCliente(24)
+validarCliente(0.2)
+validarCliente(0.6)
+validarCliente(1)
+validarCliente(2)
+validarCliente(2.4)
+validarCliente(3)
