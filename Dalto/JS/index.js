@@ -13,6 +13,8 @@
 
 // Juan quiere saber si tiene vuelto
 
+//  QUITAR LOS COMENTARIOS PARA QUE FUNCIONE ESTA PARTE(HASTA LÍNEA 76)
+
 // let dineroJuan = prompt("cuánto dinero tiene Juan?");
 // let dineroPedro = prompt("cuánto dinero tiene Pedro?");
 // let dineroLucas = prompt("cuánto dinero tiene Lucas?");
@@ -73,7 +75,6 @@
 //   alert("Lucas no tiene suficiente dinero");
 // }
 
-
 // Segundo ejercicio
 // En una fiesta, los menores de 18 años no pueden entrar
 // despues de las 2 am, la primer persona que entre no pagará entrada
@@ -81,26 +82,76 @@
 //
 //
 
-let free = false
-const validarCliente = (time) =>{
-  let edad = prompt("cuál es tu edad?")
-  if (edad >= 18){
-    if (time >= 2 && time < 7 && free == false){
-      alert(`Podes pasar gratis porque son las ${time} la primer persona después de las 2`)
-      free = true
-    }else {
-      alert("podes pasar pero tenes que pagar la entrada")
-    }
-    }else {
-  alert("menores de edad no pueden pasar")
+//  QUITAR LOS COMENTARIOS PARA QUE FUNCIONE ESTA PARTE(HASTA LÍNEA 110)
+
+// let free = false
+// const validarCliente = (time) =>{
+//   let edad = prompt("cuál es tu edad?")
+//   if (edad >= 18){
+//     if (time >= 2 && time < 7 && free == false){
+//       alert(`Podes pasar gratis porque son las ${time} la primer persona después de las 2`)
+//       free = true
+//     }else {
+//       alert("podes pasar pero tenes que pagar la entrada")
+//     }
+//     }else {
+//   alert("menores de edad no pueden pasar")
+//   }
+// }
+
+// validarCliente(23)
+// validarCliente(24)
+// validarCliente(0.2)
+// validarCliente(0.6)
+// validarCliente(1)
+// validarCliente(2)
+// validarCliente(2.4)
+// validarCliente(3)
+
+//  EJERCICIO 3
+//  hacer un array de alumnos
+// tomarles asistencia durante 30 días : a = ausente; p = presente
+// pasados los 30 días tenemos que mostrar los totales de presencias y ausencias
+// se puede tener un máximo de 10% de inasistencia por semestre
+
+let cantidad = prompt("cuántos alumnos son?");
+cantidad = parseInt(cantidad);
+let alumnosTotales = [];
+
+for (i = 0; i < cantidad; i++) {
+  alumnosTotales[i] = [prompt("nombre del alumno " + (i + 1)), 0];
+}
+
+const tomarAsistencia = (nombre, p) => {
+  let presencia = prompt(
+    `Ingrese "P" o "p" si ${nombre} estuvo presente en el día, de lo contrario presione cualquier otra tecla `
+  );
+  if (presencia == "p" || presencia == "P") {
+    alumnosTotales[p][1]++;
+  }
+};
+
+for (i = 0; i < 3; i++) {
+  for (alumno in alumnosTotales) {
+    tomarAsistencia(alumnosTotales[alumno][0], alumno);
   }
 }
 
-validarCliente(23)
-validarCliente(24)
-validarCliente(0.2)
-validarCliente(0.6)
-validarCliente(1)
-validarCliente(2)
-validarCliente(2.4)
-validarCliente(3)
+let resultado = "";
+
+for (alumno in alumnosTotales) {
+  let resultados = `${alumnosTotales[alumno][0]}:<br>
+  _______________Asistencias: ${alumnosTotales[alumno][1]}<br>
+  _______________Ausencias: ${30 - alumnosTotales[alumno][1]}<br>`;
+
+  if (30 - alumnosTotales[alumno][1] > 18) {
+    resultados += "Reprobado por inasistencias<br>";
+  } else {
+    resultados += "<br>";
+  }
+
+  resultado += resultados;
+}
+
+document.getElementById("resultado").innerHTML = resultado;
+console.log(resultado);
