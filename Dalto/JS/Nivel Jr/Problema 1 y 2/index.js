@@ -114,7 +114,6 @@
 // pasados los 30 días tenemos que mostrar los totales de presencias y ausencias
 // se puede tener un máximo de 10% de inasistencia por semestre
 
-
 //  QUITAR LOS COMENTARIOS PARA QUE FUNCIONE ESTA PARTE(HASTA LÍNEA 160)
 
 // let cantidad = prompt("cuántos alumnos son?");
@@ -159,9 +158,37 @@
 // document.getElementById("resultado").innerHTML = resultado;
 // console.log(resultado);
 
-
 // CREAR UNA CALCULADORA CON 4 FUNCIONES BÁSICAS
 
-const sumar = (num1,num2) =>{
-  return parseInt(num1) + parseInt(num2)
+const sumar = (num1, num2) => {
+  return parseInt(num1) + parseInt(num2);
+};
+const restar = (num1, num2) => {
+  return parseInt(num1) - parseInt(num2);
+};
+const multiplicar = (num1, num2) => {
+  return parseInt(num1) * parseInt(num2);
+};
+const dividir = (num1, num2) => {
+  return parseInt(num1) / parseInt(num2);
+};
+
+let op = prompt(
+  "elija una operación: 1: suma, 2: resta, 3, multiplicación, 4: división"
+);
+let numero1 = prompt("Ingrese primer número");
+let numero2 = prompt("Ingrese segundo número");
+
+if (op == 1) {
+  let result = sumar(numero1, numero2);
+  alert(`el resultado es: ${result}`);
+} else if (op == 2) {
+  let result = restar(numero1, numero2);
+  alert(`el resultado es: ${result}`);
+} else if (op == 3) {
+  let result = multiplicar(numero1, numero2);
+  alert(`el resultado es: ${result}`);
+} else if (op == 4) {
+  let result = dividir(numero1, numero2);
+  alert(`el resultado es: ${result}`);
 }
