@@ -62,19 +62,19 @@ class Altagama extends celulares {
     alert("Iniciando Reconocimiento Facial");
   }
   info() {
-    return super.info() + `Características extra: <b>${this.extra}</b><br>`;
+    return super.info() + `Características extra: <b>${this.extracam}</b><br>`;
   }
 }
 
 celular1 = new celulares("Rojo", "150g", "5'", "13 mpx", "full hd", "2GB");
 
-celular2 = new celulares("Azul", "100g", "4.5'", "4k", "4GB");
+celular2 = new celulares("Azul", "100g", "4.5'", "13 mpx", "4k", "4GB");
 
-celular3 = new celulares("Negro", "180g", "6'", "full hd", "6GB");
+celular3 = new celulares("Negro", "180g", "6'", "13 mpx", "full hd", "6GB");
 
-celularAg1 = new Altagama("Negro", "100g", "5'", "24 mpx", "4k", "32 GB");
+celularAg1 = new Altagama("Negro", "100g", "5'", "24 mpx", "4k", "32 GB", "22mpx");
 
-celularAg2 = new Altagama("Gris", "100g", "5'", "26 mpx", "4k ", "16 GB");
+celularAg2 = new Altagama("Gris", "100g", "5'", "26 mpx", "4k ", "16 GB", "18 mpx");
 
 const celuinfo = document.querySelector(".celuinfo p");
 celuinfo.innerHTML =
