@@ -57,28 +57,69 @@
 //   alert(`el resultado es: ${result}`);
 // }
 
-
 // preguntar al alumno en que materia se quiere inscribir
 // si hay 20 inscriptos negarle la inscripción
 // si hay menos de 20, inscribirlo y añadirlo a la lista de alumnos
 
-const obtenerInformacion = (materia) => {
-  materias = {
-    fisica: ["pedro", "pepito", "cofla", "maria"],
-    programacion: ["pedro", "pepito", "juan"],
-    logica: ["pedro", "juan", "pepito", "cofla", "maria"],
-    quimica: ["pedro", "juan", "pepito", "cofla", "maria"],
-  };
+const materias = {
+  fisica: ["Perez", "pedro", "pepito", "cofla", "maria"],
+  programacion: ["Rodriguez", "pedro", "pepito", "juan"],
+  logica: ["Hernandez", "pedro", "juan", "pepito", "cofla", "maria"],
+  quimica: ["Dalto", "pedro", "juan", "pepito", "cofla", "maria"],
 };
 
-if (materias[materia] !== "undefined"){
-  return [materias[materia], materia]
-} else {
-  return "la materia no existe"
-}
+const obtenerInformacion = (materia) => {
+  if (materias[materia] !== undefined) {
+    return [materias[materia], materia, materias];
+  } else {
+    return false;
+  }
+};
 
-let informacion = obtenerInformacion("fisica")
+const mostrarInformacion = (materia) => {
+  const informacion = obtenerInformacion(materia);
 
-if (informacion !== false) {
-  console.log('alumnos presentes en ${información}')
-  ±}
+  if (informacion !== false) {
+    const profesor = informacion[0][0];
+    const alumnos = informacion[0].slice(1);
+
+    const resultado = document.getElementById("resultado");
+
+    resultado.innerHTML += `
+      El profesor de <b>${informacion[1]}</b> es:
+      <b style="color:red">${profesor}</b><br>
+      Los alumnos son:
+      <b style="color:blue">${alumnos.join(", ")}</b><br><br>
+    `;
+  } else {
+    console.log("La materia no existe");
+  }
+};
+
+const inscribirAlumno = (alumno, materia) => {
+  const info = obtenerInformacion(materia);
+
+  if (info !== false) {
+    let alumnos = info[0];
+
+
+    if (alumnos.length >= 21) {
+
+      alert(`Lo siento ${alumno}, la clase de ${materia} ya está llena.`);
+    } else {
+      alumnos.push(alumno);
+      alert(`${alumno} se inscribió correctamente en ${materia}.`);
+      mostrarInformacion(materia);
+    }
+  } else {
+    alert("La materia que elegiste no existe.");
+  }
+};
+
+
+mostrarInformacion("fisica");
+mostrarInformacion("quimica");
+mostrarInformacion("programacion");
+mostrarInformacion("logica");
+
+inscribirAlumno("Gonzalo", "fisica");
