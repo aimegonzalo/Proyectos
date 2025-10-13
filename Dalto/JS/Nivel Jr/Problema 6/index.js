@@ -10,16 +10,23 @@ const crearLlave = (nombre, modelo, precio) => {
   return [img, nombre, modelo, precio];
 };
 
+const changeHidden = (nombre) => {
+  document.querySelector(".key-data").value = number;
+};
 let documentFragment = document.createDocumentFragment();
-for (var i = 0; i <= 20; i++) {
+for (var i = 0; i < 20; i++) {
   let modeloRandom = Math.round(Math.random() * 10000);
   let precioRandom = Math.round(Math.random() * 10 + 30);
   let llave = crearLlave(
-    `llave ${i}`,
+    `llave ${i + 1}`,
     `modelo ${modeloRandom}`,
     `${precioRandom}`
   );
   let div = document.createElement("DIV");
+  div.tabIndex = i;
+  div.addEventListener("click", () => {
+    changeHidden(modeloRandom);
+  });
   div.classList.add(`item-${i}`, "flex-item");
   div.innerHTML = llave[0] + llave[1] + llave[2] + llave[3];
   documentFragment.appendChild(div);
