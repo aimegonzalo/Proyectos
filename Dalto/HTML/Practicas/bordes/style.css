@@ -1,0 +1,11 @@
+.borde1 {
+  background-color: red;
+  width: 150px ;
+  margin: auto;
+  text-align: center;
+  border-width: 3px;
+  border-style: solid;
+  border-color: black;
+  margin-top: 10px;
+  border-radius: 5px;
+}
