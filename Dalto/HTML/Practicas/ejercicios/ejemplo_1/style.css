@@ -1,35 +1,45 @@
 body {
-  background-color: black;
+  background-color: white;
   font-family: sans-serif;
   color: white;
 }
 
 .card {
-  background-color: coral;
+  background-color: rgb(101, 143, 206);
   text-align: center;
   width: 300px;
   margin: auto;
-  margin-top: 20px;
+  margin-top: 50px;
+  padding: 20px 10px;
+  box-shadow: 0px 0px 45px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
 }
 
-h1 {
-  padding-top: 10px;
+.card-title {
   font-size: 22px;
   margin: 0;
 }
 
-h2 {
+.card-subtitle {
   font-size: 16px;
   letter-spacing: 2px;
   font-weight: 100;
+  margin: 0;
+  margin-top: 5px;
 }
 
 a {
-  color: white
+  color: red}
+
+.card-content {
+  font-size: 10px;
+  text-align: justify;
+  padding: 20px;
+  padding-bottom: 0px;
+  margin-bottom: 0;
 }
 
-p {
-  font-size: 10px;
-  background-color: lightcoral;
-  padding: 10px;
+.card-image {
+  width: 100px;
+  border-radius: 50%;
 }

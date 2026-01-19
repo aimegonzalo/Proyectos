@@ -9,3 +9,15 @@
   margin-top: 10px;
   border-radius: 5px;
 }
+
+h2 {
+  width: 300px;
+  margin: auto;
+  border-style: dashed;
+  border-radius: 2px;
+  border-width: 2px;
+  background-color: rgb(197, 197, 197);
+  padding: 5px;
+  font-family: sans-serif;
+  font-size: 16px;
+}
