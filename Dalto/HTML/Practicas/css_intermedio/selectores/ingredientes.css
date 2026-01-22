@@ -1,0 +1,17 @@
+/* Comentarios en CSS */
+
+img[src$="jpeg"] {
+  width: 100%;
+}
+
+ul li {
+  color: red;
+}
+
+li>strong {
+  color: blue;
+}
+
+h1 ~ p {
+  color: green
+}

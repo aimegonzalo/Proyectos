@@ -1,0 +1,64 @@
+h1{
+  color: #48e;
+  font-family: sans-serif;
+  margin: 30px;
+}
+
+h1:hover{
+  color: #000;
+  background-color: antiquewhite;
+}
+
+h1:active{
+  color: #fff;
+  background-color: black;
+}
+
+
+li:first-child {
+  font-weight: bold;
+  background-color: lightblue;
+}
+
+li:last-child {
+  font-style: italic;
+}
+
+li:nth-child(2) {
+  background-color: lightgray;
+}
+
+li:nth-of-type(3) {
+  text-decoration: underline;
+}
+
+.lista li:not(.elemento4){
+  color:#48e;
+  background-color: magenta;
+}
+
+div {
+  height: 50px;
+  border: 2px dashed #48e;
+  color:#012
+}
+
+div:empty{
+  border:none;
+  color:inherit;
+}
+
+input[type="checkbox"] {
+  margin:50px;
+}
+input[type="checkbox"]:checked {
+  margin:0px;
+}
+
+a:link{
+  color: lightgreen;
+}
+
+a:visited{
+  color: darkblue;
+}

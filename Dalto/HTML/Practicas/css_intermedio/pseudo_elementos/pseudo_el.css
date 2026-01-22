@@ -1,0 +1,37 @@
+div {
+  padding: 20px;
+}
+
+h1::first-letter{
+  color:red;
+}
+
+div::first-line{
+  font-weight: bold;
+}
+
+
+h1::selection{
+  background: yellow;
+  color: black;
+}
+
+input::placeholder{
+  color: green;
+  font-style: italic;
+}
+
+li::marker{
+  color: blue;
+  font-size: 20px;
+}
+
+li::before{
+  content: "Elemento: ";
+  color:aquamarine;
+}
+
+li::after{
+  content: " (fin del elemento)";
+  color: orange;
+}
