@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+}
+
+.primero {
+  padding: 20px;
+  background-color: #999;
+}
+
+.primero>a {
+  background-color: red;
+  color: #fff;
+  display: block;
+}
+
+.nav {
+  background-color: #48e;
+}
+
+.nav__list {
+  margin: 0;
+}
+
+.nav__item{
+  display: inline-block;
+  padding: 10px;
+  background-color: #48e;
+}
+.nav__item:hover {
+  background-color: rgba(3, 19, 43, 0.533);
+}
+
+.nav__link{
+  color: #fff;
+  text-decoration: none;
+}
